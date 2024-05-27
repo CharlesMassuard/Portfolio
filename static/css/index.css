@@ -1,0 +1,97 @@
+body{
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.split-screen {
+    display: flex;
+    height: 100vh;
+}
+
+.left-side {
+    width: 50%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 300%;
+    position: relative;
+}
+
+.right-side {
+    width: 50%;
+    background: url('../img/image_fond_accueil.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 250%;
+}
+
+.left-side h1{
+    margin: 0.001em 0; /* Ajustez cette valeur pour changer l'espace autour des éléments h1 */
+}
+
+.animated-text span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text-bottom span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInBottom 0.5s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.animated-text-bottom-entire {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInBottom 2s forwards;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-text {
+    position: absolute;
+    top: 40%; /* Ajustez cette valeur pour changer la position du premier h1 */
+    left: 0;
+}
+
+.animated-text-bottom {
+    position: absolute;
+    top: 50%; /* Ajustez cette valeur pour changer la position du deuxième h1 */
+    left: 0;
+}
