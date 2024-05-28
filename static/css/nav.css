@@ -39,6 +39,10 @@ nav a.select {
 
 @media screen and (max-width: 768px){
 
+    body{
+        background-color: black;
+    }
+
     #titre{
         text-align: center;
         top: 0;
@@ -46,6 +50,11 @@ nav a.select {
         width: 100%;
         position: absolute;
         margin-top: -2.5%;
+    }
+
+    header{
+        background-color: white;
+        color: black;
     }
 
     header img{

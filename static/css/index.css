@@ -186,6 +186,31 @@ body{
 
     #mobile{
         display: block;
-        color: black;
+        color: white;
+    }
+
+    .top-screen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        height: 50vh;
+    }
+
+    .animated-text {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 100%;
+        font-size: 13vw;
+    }
+    
+    .animated-text-bottom {
+        position: absolute;
+        left: 0;
+        top: 17%;
+        width: 100%;
+        font-size: 11vw;
     }
 }
