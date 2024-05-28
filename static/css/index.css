@@ -99,13 +99,13 @@ body{
 
 .animated-text {
     position: absolute;
-    top: 40%; /* Ajustez cette valeur pour changer la position du premier h1 */
+    top: 40%;
     left: 0;
 }
 
 .animated-text-bottom {
     position: absolute;
-    top: 50%; /* Ajustez cette valeur pour changer la position du deuxième h1 */
+    top: 50%; 
     left: 0;
 }
 
@@ -170,6 +170,23 @@ body{
     position: absolute;
     bottom: -121%;
     width: 110%;
-    height: 25vh; /* Adjust this value as needed */
+    height: 25vh;
     background: black;
+}
+
+#mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+   
+    #computer{
+        display: none;
+    }
+
+    #mobile{
+        display: block;
+        color: black;
+    }
+
 }
