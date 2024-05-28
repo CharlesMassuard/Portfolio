@@ -56,8 +56,11 @@ body{
     display: inline-block;
     opacity: 0;
     transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
     animation: slideIn 0.5s forwards;
+    -webkit-animation: slideIn 0.5s forwards;
     animation-delay: calc(0.08s * var(--i));
+    -webkit-animation-delay: calc(0.08s * var(--i));
 }
 
 @keyframes slideIn {
@@ -68,6 +71,17 @@ body{
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-opacity: 0;
+        -webkit-transform: translateY(-20px);
+    }
+    100% {
+        -webkit-opacity: 1;
+        -webkit-transform: translateY(0);
     }
 }
 
