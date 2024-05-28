@@ -1,8 +1,9 @@
 body{
-    background-color: black;
+    background-color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .split-screen {
@@ -17,26 +18,38 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-size: 300%;
+    font-size: 2.7vw;
     position: relative;
 }
 
-.right-side {
+.right-side {   
     width: 50%;
     background: url('../img/image_fond_accueil.png') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 110%;
+    -moz-background-size: 110%;
+    -o-background-size: 110%;
+    background-size: 110%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 250%;
+    font-size: 2.2vw;
+    letter-spacing: 0.3em;
 }
 
 .left-side h1{
-    margin: 0.001em 0; /* Ajustez cette valeur pour changer l'espace autour des éléments h1 */
+    margin: 0.001em 0;
+    margin-left: 0.35em;
+    margin-top: -5%;
+}
+
+.right-side h1 {
+    transition: 0.5s;
+    margin-top: -5%;
+}
+
+.right-side h1:hover{
+    letter-spacing: 0.25em;
 }
 
 .animated-text span {
@@ -44,7 +57,7 @@ body{
     opacity: 0;
     transform: translateY(-20px);
     animation: slideIn 0.5s forwards;
-    animation-delay: calc(0.1s * var(--i));
+    animation-delay: calc(0.08s * var(--i));
 }
 
 @keyframes slideIn {
@@ -63,7 +76,7 @@ body{
     opacity: 0;
     transform: translateY(20px);
     animation: slideInBottom 0.5s forwards;
-    animation-delay: calc(0.1s * var(--i));
+    animation-delay: calc(0.05s * var(--i));
 }
 
 .animated-text-bottom-entire {
@@ -94,4 +107,69 @@ body{
     position: absolute;
     top: 50%; /* Ajustez cette valeur pour changer la position du deuxième h1 */
     left: 0;
+}
+
+#deuxiemePageCentre{
+    position: relative; /*Permet de prendre en comtpe le z-index*/
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+#deuxiemePageCentre h1{
+    font-size: 4vw;
+    margin: 0;
+}
+
+#deuxiemePageCentre h2{
+    font-size: 3vw; 
+    margin: 0;
+}
+
+#deuxiemePageCentre img{
+    width: 40%;
+    margin-top: 1%;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+#deuxiemePageCentre img:hover{
+    scale: 1.01;
+    cursor: pointer;
+}
+
+/*RECTANGLES*/
+
+#rectangleBlanc {
+    position: absolute;
+    bottom: -27%;
+    width: 120%;
+    height: 30vh;
+    background: white;
+    transform: rotate(-5deg);
+    transform-origin: bottom left;
+    z-index: 1;
+}
+
+#rectangleNoir {
+    position: absolute;
+    bottom: -100%;
+    left:-10%;
+    width: 120%;
+    height: 30vh;
+    background: black;
+    transform: rotate(5deg);
+    transform-origin: bottom left;
+    z-index: 1;
+}
+
+#cover {
+    position: absolute;
+    bottom: -121%;
+    width: 110%;
+    height: 25vh; /* Adjust this value as needed */
+    background: black;
 }

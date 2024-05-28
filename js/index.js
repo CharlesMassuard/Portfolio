@@ -14,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function() {
         text2.innerHTML = text2Content.replace(/\S/g, function(letter, index) {
             return `<span class='letter' style='--i: ${index}'>${letter}</span>`;
         });
-    }, duration * 100);
+    }, duration * 70);
 });
