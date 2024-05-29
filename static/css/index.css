@@ -180,33 +180,6 @@ body{
 
 @media screen and (max-width: 768px){
 
-    .animated-text {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(-20px);
-        animation: slideIn 1.5s forwards;
-        animation-delay: calc(0.08s * var(--i));
-    }
-    
-    @keyframes slideIn {
-        0% {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    .animated-text-bottom {
-        display: inline-block;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: slideInBottom 1.5s forwards;
-        animation-delay: calc(0.05s * var(--i));
-    }
-
     #computer{
         display: none;
     }
