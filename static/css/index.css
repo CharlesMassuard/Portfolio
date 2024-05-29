@@ -24,11 +24,11 @@ body{
 
 .right-side {   
     width: 50%;
-    background: url('../img/image_fond_accueil.png') no-repeat center center fixed; 
-    -webkit-background-size: 110%;
-    -moz-background-size: 110%;
-    -o-background-size: 110%;
-    background-size: 110%;
+    background: url('../img/image_fond_accueil.png') no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
