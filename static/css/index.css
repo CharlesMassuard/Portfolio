@@ -127,6 +127,20 @@ body{
 #deuxiemePageCentre h2{
     font-size: 3vw; 
     margin: 0;
+    transition: 0.5s;
+}
+
+#deuxiemePageCentre h2:hover{
+    letter-spacing: 0.02em; 
+}
+
+#deuxiemePageCentre a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
 }
 
 #deuxiemePageCentre img{
