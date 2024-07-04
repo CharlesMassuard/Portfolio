@@ -19,4 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, duration * 70);
     });
+
+    document.getElementById("lastProjetImg").addEventListener("click", function() {
+        window.location.href = "./html/maintenance.html";
+    });
 });

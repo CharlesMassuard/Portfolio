@@ -136,6 +136,7 @@ body{
 
 #deuxiemePageCentre a{
     display: flex;
+    width: auto;
     align-items: center;
     justify-content: center;
     transition: 0.5s;
