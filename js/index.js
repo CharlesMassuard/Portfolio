@@ -23,4 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("lastProjetImg").addEventListener("click", function() {
         window.location.href = "./html/maintenance.html";
     });
+
+    document.getElementById("voirPlusTel").addEventListener("click", function() {
+        window.location.href = "./html/maintenance.html";
+    });
 });
