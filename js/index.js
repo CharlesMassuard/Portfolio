@@ -20,6 +20,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }, duration * 70);
     });
 
+    window.onload = function() {
+        adjustBottomScreenHeight();
+    };
+    
+    window.onresize = function() {
+        adjustBottomScreenHeight();
+    };
+    
+    function adjustBottomScreenHeight() {
+        var windowHeight = window.innerHeight;
+        var navbarHeight = document.querySelector('.navbar').offsetHeight; // Remplacez '.navbar' par le sélecteur de votre barre de navigation
+        var topScreenHeight = document.querySelector('.top-screen').offsetHeight; // Ajustez si vous avez un élément top screen
+        var bottomScreenHeight = windowHeight - navbarHeight - topScreenHeight;
+        
+        document.querySelector('.bottom-screen').style.height = bottomScreenHeight + 'px';
+    }
+
     document.getElementById("lastProjetImg").addEventListener("click", function() {
         window.location.href = "./html/maintenance.html";
     });
