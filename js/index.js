@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function adjustBottomScreenHeight() {
         var windowHeight = window.innerHeight;
-        var navbarHeight = document.querySelector('.navbar').offsetHeight; // Remplacez '.navbar' par le sélecteur de votre barre de navigation
-        var topScreenHeight = document.querySelector('.top-screen').offsetHeight; // Ajustez si vous avez un élément top screen
+        var navbarHeight = document.querySelector('header').offsetHeight;
+        var topScreenHeight = document.querySelector('.top-screen').offsetHeight;
         var bottomScreenHeight = windowHeight - navbarHeight - topScreenHeight;
         
         document.querySelector('.bottom-screen').style.height = bottomScreenHeight + 'px';

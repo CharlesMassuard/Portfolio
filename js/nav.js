@@ -19,6 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
     burger.addEventListener('click', function(e){
         this.classList.toggle('is-open');
         nav.classList.toggle('is-open');
+        if(nav.classList.contains('is-open')) {
+            document.getElementById("voirPlusTel").style.zIndex = "0";
+        } else {    
+            document.getElementById("voirPlusTel").style.zIndex = "2000";
+        }
     });
 
     slowmo.addEventListener('click', function(e){

@@ -252,6 +252,11 @@ body{
         color: #fff;
         font-size: 1em;
         padding: 0.5em 1em;
+        z-index: 2000;
+    }
+
+    #voirPlusTel:hover{
+        background: rgba(0, 0, 0, 0.8);
         cursor: pointer;
     }
 }
