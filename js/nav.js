@@ -45,4 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 3500);
         }, 5500);
     });
+
+    window.addEventListener("click", function(e) {
+        if (nav.classList.contains('is-open')) {
+            burger.dispatchEvent(clickEvent);
+        }
+    });
 });
