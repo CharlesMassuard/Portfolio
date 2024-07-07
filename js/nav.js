@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
     burger.addEventListener('click', function(e){
         this.classList.toggle('is-open');
         nav.classList.toggle('is-open');
-        if(nav.classList.contains('is-open')) {
+        if(nav.classList.contains('is-open')) { 
             document.querySelectorAll(".device").forEach(device => {
                 device.style.height = "100%";
             });
         } else {
             document.querySelectorAll(".device").forEach(device => {
-                device.style.height = "0%";
+                device.style.height = "0%"; //permet d'accéder aux boutons
             });
         }
     });

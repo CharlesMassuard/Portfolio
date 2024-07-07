@@ -14,7 +14,7 @@
         {
             "id": 3,
             "nom": "Sonorify",
-            "img": ["../static/img/sonorify.png", "../static/img/sonorify2.png", "../static/img/sonorify3.png", "../static/img/sonorify4.png", "../static/img/sonorify5.png", "../static/img/sonorify6.png", "../static/img/sonorify7.png"]
+            "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"]
         },
         {
             "id": 4,
