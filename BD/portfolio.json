@@ -8,6 +8,11 @@
         },
         {
             "id": 2,
+            "nom": "Site personnel",
+            "img": "../static/img/portfolio_img.png"
+        },
+        {
+            "id": 3,
             "nom": "Sonorify",
             "img": "../static/img/sonorify.png"
         }

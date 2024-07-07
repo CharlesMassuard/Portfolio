@@ -2,7 +2,7 @@ async function fetchAndDisplayProjets() {
     try {
         const response = await fetch("../BD/portfolio.json");
         const data = await response.json();
-        const gridProjet = document.getElementById("gridProjets");
+        const gridProjet = document.getElementsByClassName("gridProjets");
 
         data.projets.forEach(projet => {
             const projetDiv = document.createElement("div");
@@ -11,7 +11,9 @@ async function fetchAndDisplayProjets() {
                 <img src="${projet.img}" alt="Image du projet" title="Voir le projet">
                 <h2 title="Voir le projet">${projet.nom}</h2>
             `;
-            gridProjet.appendChild(projetDiv);
+            Array.from(document.getElementsByClassName("gridProjets")).forEach(gridProjet => {
+                gridProjet.appendChild(projetDiv.cloneNode(true)); //ajouter au computer et au mobile
+            });
         });
     } catch (error) {
         console.error('Error fetching projects', error);

@@ -15,7 +15,7 @@ body{
     font-size: 3vw;
 }
 
-#gridProjets{
+#computer > .gridProjets{
     display: grid;
     position: relative;
     top: 150px;
@@ -70,6 +70,45 @@ body{
 
     #mobile{
         display: block;
-        color: white;
+    }
+
+    .gridProjets{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        column-gap: 300px;
+        row-gap: 80px;
+    }
+
+    .gridProjets .projet:first-child{
+        margin-top: 80px;
+    }
+
+    .projet{
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+        transition: 0.5s;
+        width: 20vw;
+        position: relative;
+        height: 100%;
+    }
+
+    .projet>img{
+        width: 70vw;
+        height: auto;
+    }
+
+    .projet>h2{
+        font-size: 5vw;
+        margin: 0;
+        text-align: center;
+        width: 100vw;
+        position: absolute;
+        bottom: -40px;
     }
 }
