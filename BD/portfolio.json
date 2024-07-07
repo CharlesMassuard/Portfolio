@@ -15,6 +15,21 @@
             "id": 3,
             "nom": "Sonorify",
             "img": "../static/img/sonorify.png"
+        },
+        {
+            "id": 4,
+            "nom": "Dinodex",
+            "img": "../static/img/dinodex.png"
+        },
+        {
+            "id": 5,
+            "nom": "Space Invaders",
+            "img": "../static/img/spaceinvaders-menu.png"
+        },
+        {
+            "id": 6,
+            "nom": "Réseau social",
+            "img": "../static/img/reseau_social_jfx.png"
         }
     ]
 }

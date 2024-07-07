@@ -44,10 +44,6 @@ nav a.select {
 
 @media screen and (max-width: 768px){
 
-    body{
-        background-color: black;
-    }
-
     #titre{
         text-align: center;
         top: 0;

@@ -24,6 +24,7 @@ body{
     column-gap: 300px;
     row-gap: 110px;
     padding: 20px;
+    margin-bottom: 15%;
 
 }
 
@@ -81,6 +82,7 @@ body{
         background-color: white;
         column-gap: 300px;
         row-gap: 80px;
+        margin-bottom: 15%;
     }
 
     .gridProjets .projet:first-child{
