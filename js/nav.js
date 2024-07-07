@@ -8,9 +8,17 @@ document.addEventListener('DOMContentLoaded', function() {
         count++;
         if (count == 5) {
             count = 0;
-            window.open("https://youtu.be/dQw4w9WgXcQ?si=83OgelfkkR2b5ao3", "_blaznk")
+            window.open("https://youtu.be/dQw4w9WgXcQ?si=83OgelfkkR2b5ao3", "_blank")
         }
     });
+
+    var logoMobile = document.getElementsByClassName("logoMobile");
+
+    for (let i = 0; i < logoMobile.length; i++) {
+        logoMobile[i].addEventListener("click", function() {
+            window.location.href = "../index.html";
+        });
+    }
 
     let burger = document.getElementById('burger'),
 	 nav    = document.getElementById('main-nav'),

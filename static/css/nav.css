@@ -13,6 +13,11 @@ header img{
     margin-top: 3%;
 }
 
+.logoMobile{
+    position: relative;
+    z-index: 2000;
+}
+
 nav{
     background-color: white;
     display: flex;
