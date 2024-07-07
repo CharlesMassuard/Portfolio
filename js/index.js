@@ -37,11 +37,23 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.bottom-screen').style.height = bottomScreenHeight + 'px';
     }
 
-    document.getElementById("lastProjetImg").addEventListener("click", function() {
-        window.location.href = "./html/maintenance.html";
-    });
-
     document.getElementById("voirPlusTel").addEventListener("click", function() {
         window.location.href = "./html/portfolio.html";
     });
+
+    displayLastProjet();
+
+    async function displayLastProjet() {
+        try {
+            const response = await fetch("../BD/portfolio.json");
+            const data = await response.json();
+            document.getElementById("deuxiemePageCentre").innerHTML = `
+                <h1>Mon dernier projet</h1>
+                <a href="./html/projet.html?id=${data.projets[data.projets.length - 1].id}"><img id=lastProjetImg src="${data.projets[data.projets.length - 1].img[0]}" alt="Image du dernier projet" title="Voir le projet"></a>
+                <a href="./html/projet.html?id=${data.projets[data.projets.length - 1].id}"><h2 title="Voir le projet">${data.projets[data.projets.length - 1].nom}</h2></a>
+            `;
+        } catch (error) {
+            console.error('Error fetching projects', error);
+        }
+    }
 });

@@ -1,35 +1,34 @@
 {
     "projets" : [
-
         {
             "id": 1,
-            "nom": "Find Castillon's Song",
-            "img": ["../static/img/findcastillonsong.png", "../static/img/findcastillonsong2.png", "../static/img/findcastillonsong3.png"]
-        },
-        {
-            "id": 2,
-            "nom": "Site personnel",
-            "img":  ["../static/img/portfolio_img.png"]
-        },
-        {
-            "id": 3,
-            "nom": "Sonorify",
-            "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"]
-        },
-        {
-            "id": 4,
-            "nom": "Dinodex",
-            "img": ["../static/img/dinodex.png"]
-        },
-        {
-            "id": 5,
             "nom": "Space Invaders",
             "img": ["../static/img/spaceinvaders-menu.png"]
         },
         {
-            "id": 6,
+            "id": 2,
             "nom": "Réseau social",
             "img": ["../static/img/reseau_social_jfx.png"]
+        },
+        {
+            "id": 3,
+            "nom": "Dinodex",
+            "img": ["../static/img/dinodex.png"]
+        },
+        {
+            "id": 4,
+            "nom": "Sonorify",
+            "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"]
+        },
+        {
+            "id": 5,
+            "nom": "Find Castillon's Song",
+            "img": ["../static/img/findcastillonsong.png", "../static/img/findcastillonsong2.png", "../static/img/findcastillonsong3.png"]
+        },
+        {
+            "id": 6,
+            "nom": "Site personnel",
+            "img":  ["../static/img/portfolio_img.png"]
         }
     ]
 }

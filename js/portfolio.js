@@ -4,7 +4,7 @@ async function fetchAndDisplayProjets() {
         const data = await response.json();
         const gridProjet = document.getElementsByClassName("gridProjets");
 
-        data.projets.forEach(projet => {
+        data.projets.reverse().forEach(projet => {
             const projetDiv = document.createElement("div");
             projetDiv.className = "projet";
             projetDiv.setAttribute('data-id', projet.id);
