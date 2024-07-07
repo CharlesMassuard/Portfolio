@@ -4,7 +4,12 @@
         {
             "id": 1,
             "nom": "Find Castillon's Song",
-            "img": "../img/findcastillonsong.png"
+            "img": "../static/img/findcastillonsong.png"
+        },
+        {
+            "id": 2,
+            "nom": "Sonorify",
+            "img": "../static/img/sonorify.png"
         }
     ]
 }

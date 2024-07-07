@@ -22,30 +22,35 @@ body{
     margin: 5%;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     column-gap: 300px;
-    row-gap: 50px;
+    row-gap: 110px;
     padding: 20px;
 
 }
 
-.projet{
+.projet {
     display: flex;
-    align-items: center;
+    align-items: center; 
+    justify-content: center;
     flex-direction: column;
     transition: 0.5s;
     width: 20vw;
+    position: relative;
+    height: 100%; 
 }
 
-.projet>img{
+.projet>img {
     width: 25vw;
     height: auto;
     border-radius: 20px;
 }
 
-.projet>h2{
+.projet>h2 {
     font-size: 1.8vw;
     margin: 0;
-    margin-top: 2%;
+    margin-top: 2%; 
     text-align: center;
+    position: absolute; 
+    bottom: -50px;
 }
 
 .projet:hover{
