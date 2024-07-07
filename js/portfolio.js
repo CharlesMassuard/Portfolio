@@ -28,5 +28,3 @@ async function fetchAndDisplayProjets() {
 document.addEventListener('DOMContentLoaded', (event) => {
     fetchAndDisplayProjets();
 });
-
-get
