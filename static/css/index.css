@@ -202,6 +202,7 @@ body{
     #mobile{
         display: block;
         color: white;
+        background-color: black;
     }
 
     .top-screen{
