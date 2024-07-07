@@ -42,6 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById("voirPlusTel").addEventListener("click", function() {
-        window.location.href = "./html/maintenance.html";
+        window.location.href = "./html/portfolio.html";
     });
 });
