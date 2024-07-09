@@ -43,13 +43,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     displayLastProjet();
 
+    window.voirLastProjet = async function(){ 
+        console.log("Clicked");
+        const response = await fetch("../BD/portfolio.json");
+        const data = await response.json();
+        window.location.href = `./html/projet.html?id=${data.projets[data.projets.length - 1].id}`;
+    };
+
     async function displayLastProjet() {
         try {
             const response = await fetch("../BD/portfolio.json");
             const data = await response.json();
             document.getElementById("deuxiemePageCentre").innerHTML = `
                 <h1>Mon dernier projet</h1>
-                <a href="./html/projet.html?id=${data.projets[data.projets.length - 1].id}"><img id=lastProjetImg src="${data.projets[data.projets.length - 1].img[0]}" alt="Image du dernier projet" title="Voir le projet"></a>
+                <img id=lastProjetImg src="${data.projets[data.projets.length - 1].img[0]}" alt="Image du dernier projet" title="Voir le projet" onClick="voirLastProjet()">
                 <a href="./html/projet.html?id=${data.projets[data.projets.length - 1].id}"><h2 title="Voir le projet">${data.projets[data.projets.length - 1].nom}</h2></a>
             `;
         } catch (error) {
