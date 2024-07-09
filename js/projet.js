@@ -77,6 +77,10 @@ async function loadProjectImages(imagesprojet) {
 
 document.addEventListener('DOMContentLoaded', loadProjectDetails);
 
+document.getQuerySelector('.mySlides').addEventListener('mouseover', function() {
+    console.log("hover");
+});
+
     
 window.swapTailleImage = function(i){
     let img = document.getElementById("img"+i);

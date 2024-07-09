@@ -40,16 +40,12 @@ body{
   max-width: 35vw;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
 .mySlides img{
     max-height: 35vh;
     cursor: zoom-in;
     transition: all(0s);
 }
+
 
 /* Next & previous buttons */
 .prev, .next {
@@ -66,6 +62,7 @@ body{
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  opacity: 0;
 }
 
 /* Position the "next button" to the right */
