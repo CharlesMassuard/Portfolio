@@ -5,9 +5,10 @@ async function loadProjectDetails() {
     try {
         const projet = await ProjetsProvider.getProjet(projectId);
         var titreProjet = document.getElementById('titreProjet');
-        if (titreProjet && projet) {
+        if (projet) {
             titreProjet.textContent = projet.nom;
             loadProjectImages(projet.img); // Appel de la fonction pour charger les images
+            document.getElementById('descriptionProjet').innerHTML = projet.description; //innerHTML Permet de pouvoir utiliser des balises pour la mise en page
         }
         return projet;
     } catch (error) {

@@ -18,7 +18,8 @@
         {
             "id": 4,
             "nom": "Sonorify",
-            "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"]
+            "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"],
+            "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs."
         },
         {
             "id": 5,
