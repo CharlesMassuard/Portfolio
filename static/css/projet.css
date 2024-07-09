@@ -40,6 +40,11 @@ body{
   max-width: 35vw;
 }
 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
 .mySlides img{
     max-height: 35vh;
     cursor: zoom-in;

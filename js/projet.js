@@ -72,15 +72,20 @@ async function loadProjectImages(imagesprojet) {
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
     }
+
+    document.getElementById('caroussel').addEventListener('mouseover', function() {
+        document.querySelector('.prev').style.opacity = '1';
+        document.querySelector('.next').style.opacity = '1';
+    });
+
+    document.getElementById('caroussel').addEventListener('mouseout', function() {
+        document.querySelector('.prev').style.opacity = '0';
+        document.querySelector('.next').style.opacity = '0';
+    });
 }
 
 
 document.addEventListener('DOMContentLoaded', loadProjectDetails);
-
-document.getQuerySelector('.mySlides').addEventListener('mouseover', function() {
-    console.log("hover");
-});
-
     
 window.swapTailleImage = function(i){
     let img = document.getElementById("img"+i);
