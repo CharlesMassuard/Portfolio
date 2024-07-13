@@ -16,11 +16,6 @@
         },
         {
             "id": 3,
-            "nom": "Dinodex",
-            "img": ["../static/img/dinodex.png"]
-        },
-        {
-            "id": 4,
             "nom": "Sonorify",
             "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"],
             "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.",
@@ -29,6 +24,11 @@
             "site": "https://sonorify.herokuapp.com/",
             "technos": ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
             "coupDeCoeur": true
+        },
+        {
+            "id": 4,
+            "nom": "Dinodex",
+            "img": ["../static/img/dinodex.png"]
         },
         {
             "id": 5,
