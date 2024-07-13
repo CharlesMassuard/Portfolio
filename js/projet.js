@@ -105,7 +105,7 @@ window.swapTailleImage = function(i){
 
     if (maxHeightVh == 35) {
         img.style.width = "90vw";
-        img.style.maxHeight = "100vh";
+        img.style.maxHeight = "90vh";
         img.style.height = "auto";
         img.style.cursor = "zoom-out";
         img.style.position = "fixed";

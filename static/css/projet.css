@@ -6,6 +6,10 @@ body{
     overflow-x: hidden;
 }
 
+a{
+  text-decoration: none;
+}
+
 #titreProjet{
     position: absolute;
     text-align: center;
@@ -24,30 +28,44 @@ body{
     max-width: 35vw;
 }
 
+#titreDescription{
+  position: absolute;
+  top: 170px;
+  left: 41%;
+  font-size: 1.7vw;
+}
+
 #descriptionProjet{
-    display: flex;
-    flex-direction: column;
-    position: inherit;
-    top: 250px;
-    font-size: 1.3vw;
-    line-height: 1.5;
-    text-align: justify;
-    display: inline; /*Permet de pouvoir utiliser des balises pour la mise en page*/
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 270px;
+  left: 41%;
+  margin-right: 10%;
+  font-size: 1.3vw;
+  line-height: 1.5;
+  text-align: justify;
+  display: inline; /*Permet de pouvoir utiliser des balises pour la mise en page*/
+  max-height: 35vh;
 }
 
-#rightSide{
+#bottom{
     display: flex;
-    flex-direction: column;
     position: absolute;
-    top: 210px;
-    right: 27%;
+    top: 700px;
+    left: 5%;
+    right: 5%;
 }
 
-#rightSide p{
+#bottom p{
     font-size: 1.5vw;
-    line-height: 1.5;
     display: inline; /*Permet de pouvoir utiliser des balises pour la mise en page*/
     margin-top: 0;
+}
+
+#infos{
+    display: flex;
+    flex-direction: column;
 }
 
 .btn {
@@ -61,10 +79,6 @@ body{
   transition: all 0.5s;
   width: 18vw;
   text-align: start;
-}
-
-.emoji {
-  color: white;
 }
 
 /* Darker background on mouse-over */
@@ -95,7 +109,7 @@ body{
 }
 
 .mySlides img{
-    max-height: 400px;
+    max-height: 35vh;
     cursor: zoom-in;
     transition: all(0s);
 }
