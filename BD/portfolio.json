@@ -27,7 +27,8 @@
             "cadre": "2ème année de BUT Informatique",
             "github": "https://www.github.com/CharlesMassuard/Sonorify",
             "site": "https://sonorify.herokuapp.com/",
-            "technos": ["HTML", "CSS", "PHP", "JavaScript", "MySQL"]
+            "technos": ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
+            "coupDeCoeur": true
         },
         {
             "id": 5,
@@ -42,7 +43,8 @@
         {
             "id": 6,
             "nom": "Site personnel",
-            "img":  ["../static/img/portfolio_img.png"]
+            "img":  ["../static/img/portfolio_img.png"],
+            "coupDeCoeur": true
         }
     ],
 
