@@ -3,7 +3,11 @@
         {
             "id": 1,
             "nom": "Space Invaders",
-            "img": ["../static/img/spaceinvaders-menu.png"]
+            "img": ["../static/img/spaceinvaders-menu.png"],
+            "description": "Ce projet consiste à recréer le jeu 'SpaceInvaders' à l'aide de <i>JavaFX</i>. Le jeu est composé d'un menu principal, un menu pause, et une fenetre de jeu. Une musique en arrière plan est présente, ainsi que plusieurs bruitages (tirs, destruction d'ennemis). Le jeu est composé de plusieurs vagues, à chaque nouvelle vague, il y a plus d'ennemis. Dans le menu principal, le joueur peut choisir le nombre de vagues et le nombre d'ennemis.",
+            "cadre": "1ère année de BUT Informatique",
+            "github": "https://github.com/CharlesMassuard/SAE_SpaceInvaders",
+            "technos": ["Java", "JavaFX"]
         },
         {
             "id": 2,
@@ -19,17 +23,84 @@
             "id": 4,
             "nom": "Sonorify",
             "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"],
-            "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs."
+            "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.",
+            "cadre": "2ème année de BUT Informatique",
+            "github": "https://www.github.com/CharlesMassuard/Sonorify",
+            "site": "https://sonorify.herokuapp.com/",
+            "technos": ["HTML", "CSS", "PHP", "JavaScript", "MySQL"]
         },
         {
             "id": 5,
             "nom": "Find Castillon's Song",
-            "img": ["../static/img/findcastillonsong.png", "../static/img/findcastillonsong2.png", "../static/img/findcastillonsong3.png"]
+            "img": ["../static/img/findcastillonsong.png", "../static/img/findcastillonsong2.png", "../static/img/findcastillonsong3.png"],
+            "description": "Ce site permet de s'entrainer à trouver le nom des chansons d'<b>Adèle Castillon</b>. Il regroupe les chansons de sa carrière solo, ainsi que de <i>Vidéoclub</i>, son premier groupe. Il y a 4 modes de jeux disponibles : le mode normal, contre la montre, aléatoire et extrème. Le joueur doit ainsi trouver le nom de 28 chansons, avec un temps limité ou non, en fonction du mode choisi. Le site est entièrement responsive.",
+            "cadre": "Projet personnel",
+            "github": "https://github.com/CharlesMassuard/FindCastillonsSong",
+            "technos": ["HTML", "CSS", "JavaScript"],
+            "coupDeCoeur": true
         },
         {
             "id": 6,
             "nom": "Site personnel",
             "img":  ["../static/img/portfolio_img.png"]
+        }
+    ],
+
+    "technologies":[
+        {
+            "id": 1,
+            "nom": "Java",
+            "img": ["../static/img/technologies/Java.png"]
+        },
+        {
+            "id": 2,
+            "nom": "JavaFX",
+            "img": ["../static/img/technologies/JavaFX.png"]
+        },
+        {
+            "id": 3,
+            "nom": "CSS",
+            "img": ["../static/img/technologies/CSS.png"]
+        },
+        {
+            "id": 4,
+            "nom": "HTML",
+            "img": ["../static/img/technologies/HTML.png"]
+        },
+        {
+            "id": 5,
+            "nom": "JavaScript",
+            "img": ["../static/img/technologies/JS.png"]
+        },
+        {
+            "id": 6,
+            "nom": "MariaDB",
+            "img": ["../static/img/technologies/MariaDB.png"]
+        },
+        {
+            "id": 7,
+            "nom": "MySQL",
+            "img": ["../static/img/technologies/mysql.png"]
+        },
+        {
+            "id": 8,
+            "nom": "PHP",
+            "img": ["../static/img/technologies/php.png"]
+        },
+        {
+            "id": 9,
+            "nom": "Python",
+            "img": ["../static/img/technologies/Python.png"]
+        },
+        {
+            "id": 10,
+            "nom": "Visual Studio Code",
+            "img": ["../static/img/technologies/VSCode.png"]
+        },
+        {
+            "id": 11,
+            "nom": "VueJS",
+            "img": ["../static/img/technologies/VueJs.png"]
         }
     ]
 }

@@ -12,6 +12,9 @@ async function fetchAndDisplayProjets() {
                 <img src="${projet.img[0]}" alt="Image du projet" title="Voir le projet">
                 <h2 title="Voir le projet">${projet.nom}</h2>
             `;
+            if(projet.coupDeCoeur) {
+                projetDiv.innerHTML += `<img src="../static/img/coupDeCoeur.webp" alt="Coup de coeur" title="Coup de coeur" class="coupDeCoeur">`;
+            }
             Array.from(document.getElementsByClassName("gridProjets")).forEach(gridProjet => {
                 const clonedProjetDiv = projetDiv.cloneNode(true);
                 clonedProjetDiv.addEventListener('click', function() {

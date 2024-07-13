@@ -4,7 +4,7 @@ export default class ProjetsProvider {
         try{
             const response = await fetch("../BD/portfolio.json");
             const data = await response.json();
-            return data;
+            return data.projets;
         } catch (error) {
             console.error('Error fetching projects', error);
         }
@@ -13,7 +13,7 @@ export default class ProjetsProvider {
     static getProjet = async(id) => {
         try{
             const projets = await this.fetchProjets();
-            return projets.projets.find(projet => projet.id == id);
+            return projets.find(projet => projet.id == id);
         } catch (error) {
             console.error('Error fetching projects', error);
         }

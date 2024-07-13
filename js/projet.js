@@ -1,4 +1,5 @@
 import ProjetsProvider from "../services/projetsProvider.js";
+import TechnosProvider from "../services/technosProvider.js";
 
 async function loadProjectDetails() {
     const projectId = getProjectIdFromUrl();
@@ -9,6 +10,30 @@ async function loadProjectDetails() {
             titreProjet.textContent = projet.nom;
             loadProjectImages(projet.img); // Appel de la fonction pour charger les images
             document.getElementById('descriptionProjet').innerHTML = projet.description; //innerHTML Permet de pouvoir utiliser des balises pour la mise en page
+            document.getElementById("bottom").innerHTML = `
+                <div id="info">
+                    <p><b>Cadre : </b>${projet.cadre}</p>
+                </div>`;
+            if(projet.github) {
+                document.getElementById("bottom").innerHTML += `
+                    <a class="btn git" href="${projet.github}" target="_blank"><i class="fa fa-github"></i> Accéder au GitHub <i class="fa fa-external-link"></i></a>`;
+            }
+            if(projet.site) {
+                document.getElementById("bottom").innerHTML += `
+                    <br>
+                    <a class="btn site" href="${projet.site}" target="_blank">&#127760 Accéder au Site <i class="fa fa-external-link"></i></a>
+                    <i id=textSite>${projet.site}</i>`;
+            }
+            if(projet.technos){
+                let technos = [];
+                for (let i = 0; i < projet.technos.length; i++) {
+                    technos.push(await TechnosProvider.getTechno(projet.technos[i]));
+                }
+                technos.forEach(techno => {
+                    document.getElementById("technoProjet").innerHTML += `
+                        <img src="${techno.img}" alt="${techno.nom}" title="${techno.nom}" class="technoImg">`;
+                });
+            }
         }
         return projet;
     } catch (error) {
@@ -38,13 +63,13 @@ async function loadProjectImages(imagesprojet) {
             <div class="mySlides fade">
                 <img src="${imagesprojet[i]}" id="img${i}"style="width:100%" alt="Image ${i}" onClick="swapTailleImage(${i})">
             </div>`;
-            dots.innerHTML += `<span class="dot" onclick="currentSlide(${i+1})"></span>`;
+            dots.innerHTML += `<span class="dot" onclick="currentSlide(${i+1})" title="Afficher l'image ${i+1}"></span>`;
         }
     }
     slideshow.innerHTML += `
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>`;
+        <a class="prev" onclick="plusSlides(-1)" title="Afficher l'image précédnete">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" title="Afficher l'image suivante">&#10095;</a>`;
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -97,13 +122,9 @@ window.swapTailleImage = function(i){
     // Convertissez cette valeur en nombre
     var maxHeightValue = parseFloat(maxHeightPx); // Convertit "500px" en 500
 
-    // Obtenez la hauteur de la fenêtre du navigateur en pixels
-    var viewportHeight = window.innerHeight;
+    var precButton = document.querySelector('.prev');
 
-    // Convertissez la valeur de maxHeight en vh
-    var maxHeightVh = (maxHeightValue / viewportHeight) * 100;
-
-    if (maxHeightVh == 35) {
+    if (maxHeightValue == 500) {
         img.style.width = "90vw";
         img.style.maxHeight = "90vh";
         img.style.height = "auto";
@@ -111,12 +132,16 @@ window.swapTailleImage = function(i){
         img.style.position = "fixed";
         img.style.top = "70px";
         img.style.zIndex = "1000";
+        img.style.left = "5vw";
+        precButton.style.display = "none";
     } else {
-        img.style.maxHeight = "35vh";
+        img.style.maxHeight = "500px";
         img.style.zIndex = "0";
-        img.style.width = "35vw";
+        img.style.width = "48vw";
         img.style.position = "relative";
         img.style.cursor = "zoom-in";
         img.style.top = "0";
+        img.style.left = "";
+        precButton.style.display = "block";
     }
 }

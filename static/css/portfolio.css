@@ -45,6 +45,15 @@ body{
     border-radius: 20px;
 }
 
+.projet img.coupDeCoeur {
+    width: 15%;
+    height: auto;
+    position: absolute;
+    top: -5%;
+    right: -17%;
+    rotate: 15deg;
+}
+
 .projet>h2 {
     font-size: 1.8vw;
     margin: 0;
