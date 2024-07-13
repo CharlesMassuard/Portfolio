@@ -36,7 +36,7 @@
             "img": ["../static/img/findcastillonsong.png", "../static/img/findcastillonsong2.png", "../static/img/findcastillonsong3.png"],
             "description": "Ce site permet de s'entrainer à trouver le nom des chansons d'<b>Adèle Castillon</b>. Il regroupe les chansons de sa carrière solo, ainsi que de <i>Vidéoclub</i>, son premier groupe. Il y a 4 modes de jeux disponibles : le mode normal, contre la montre, aléatoire et extrème. Le joueur doit ainsi trouver le nom de 28 chansons, avec un temps limité ou non, en fonction du mode choisi. Le site est entièrement responsive.",
             "cadre": "Projet personnel",
-            "github": "https://github.com/CharlesMassuard/FindCastillonsSong",
+            "github": "https://github.com/CharlesMassuard/FindCastillonSong",
             "technos": ["HTML", "CSS", "JavaScript"],
             "coupDeCoeur": true
         },
