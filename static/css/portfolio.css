@@ -114,6 +114,15 @@ body{
         height: auto;
     }
 
+    .projet img.coupDeCoeur {
+        width: 45%;
+        height: auto;
+        position: absolute;
+        top: -5%;
+        right: -140%;
+        rotate: 15deg;
+    }
+
     .projet>h2{
         font-size: 5vw;
         margin: 0;
