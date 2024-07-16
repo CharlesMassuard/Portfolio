@@ -113,6 +113,10 @@ async function loadProjectImages(imagesprojet) {
 
 
 document.addEventListener('DOMContentLoaded', loadProjectDetails);
+
+document.addEventListener('DOMContentLoaded', function() {
+    window.location.href = "../html/maintenance.html";
+});
     
 window.swapTailleImage = function(i){
     let img = document.getElementById("img"+i);
