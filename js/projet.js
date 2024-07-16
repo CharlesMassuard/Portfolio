@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 window.swapTailleImage = function(i){
     let img = document.getElementById("img"+i);
-    // Utilisez getComputedStyle pour obtenir toutes les propriétés CSS calculées
+    // Utilisez getComputedStyle pour obtenir toutes les propriétés CSS calculées //
     var style = window.getComputedStyle(img);
     // Accédez à la propriété max-height
     var maxHeightPx = style.maxHeight; // La valeur est en pixels (ex: "500px")
