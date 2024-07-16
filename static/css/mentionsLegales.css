@@ -16,6 +16,10 @@ body{
 
 @media screen and (max-width: 768px){
 
+    #mobile{
+        display: block;
+    }
+
     #titreMentions{
         display: none;
     }
