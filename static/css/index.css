@@ -231,7 +231,7 @@ body{
     }
 
     .bottom-screen {   
-        height: 65vh;
+        height: 66vh;
         background: url('../img/image_fond_accueil.png') no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;

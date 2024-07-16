@@ -13,13 +13,14 @@ async function loadProjectDetails() {
             document.getElementById("bottom").innerHTML = `
                 <div id="info">
                     <p><b>Cadre : </b>${projet.cadre}</p>
-                </div>`;
+                </div>
+                <div id="boutonsBottom"></div>`;
             if(projet.github) {
-                document.getElementById("bottom").innerHTML += `
+                document.getElementById("boutonsBottom").innerHTML += `
                     <a class="btn git" href="${projet.github}" target="_blank"><i class="fa fa-github"></i> Accéder au GitHub <i class="fa fa-external-link"></i></a>`;
             }
             if(projet.site) {
-                document.getElementById("bottom").innerHTML += `
+                document.getElementById("boutonsBottom").innerHTML += `
                     <br>
                     <a class="btn site" href="${projet.site}" target="_blank">&#127760 Accéder au Site <i class="fa fa-external-link"></i></a>
                     <i id=textSite>${projet.site}</i>`;
