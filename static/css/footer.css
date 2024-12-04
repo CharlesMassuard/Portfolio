@@ -1,14 +1,8 @@
 #textFooter{
-    color: white;
+    color: black;
     font-size: 20px;
     position: relative;
     left: 1%;
     top: 500px;
     z-index: 1;
-}
-
-#mentionsLegales{
-    text-decoration: none;
-    color: white;
-    text-decoration: underline;
 }
