@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    var originalRightBackground = document.querySelector('.right-side').style.backgroundImage;
+
     var texts1 = document.querySelectorAll('.animated-text');
     texts1.forEach(function(text1) {
         text1.innerHTML = text1.textContent.replace(/\S/g, function(letter, index) {
@@ -63,4 +66,28 @@ document.addEventListener('DOMContentLoaded', function() {
             console.error('Error fetching projects', error);
         }
     }
+
+    //changement arriere plan si hover
+
+    document.getElementById("devText").addEventListener("mouseover", function() {
+        document.querySelector('.right-side').style.backgroundImage = "url('../static/img/dev.png')";
+        document.querySelector('.right-side').style.color = "white";
+    });
+
+
+    document.getElementById("devText").addEventListener("mouseout", function() {
+        document.querySelector('.right-side').style.backgroundImage = originalRightBackground;
+        document.querySelector('.right-side').style.color = "black";
+    });
+
+    document.getElementById("droneText").addEventListener("mouseover", function() {
+        document.querySelector('.right-side').style.backgroundImage = "url('../static/img/drone.webp')";
+        document.querySelector('.right-side').style.color = "white";
+
+    });
+
+    document.getElementById("droneText").addEventListener("mouseout", function() {
+        document.querySelector('.right-side').style.backgroundImage = originalRightBackground;
+        document.querySelector('.right-side').style.color = "black";
+    });
 });

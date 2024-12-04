@@ -24,7 +24,8 @@ body{
 
 .right-side {   
     width: 50%;
-    background: url('../img/image_fond_accueil.png') no-repeat center center; 
+    background: url('../img/image_fond_accueil_resize.png') no-repeat center center; 
+    transition: background-image 0.5s ease-in-out;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -82,9 +83,28 @@ body{
 .animated-text-bottom-entire {
     opacity: 0;
     transform: translateY(20px);
-    animation: slideInBottom 2s forwards;
     animation-delay: calc(0.1s * var(--i));
 }
+
+#devText{
+    animation: slideInTop 2s forwards;
+}
+
+#droneText{
+    animation: slideInBottom 2s forwards;
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 @keyframes slideInBottom {
     0% {
@@ -232,7 +252,7 @@ body{
 
     .bottom-screen {   
         height: 66vh;
-        background: url('../img/image_fond_accueil.png') no-repeat center center fixed; 
+        background: url('../img/image_fond_accueil_resize.png') no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
