@@ -24,7 +24,7 @@ body{
 
 .right-side {   
     width: 50%;
-    background: url('../img/image_fond_accueil.png') no-repeat center center; 
+    background: url('../img/grandBornand.png') no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -167,26 +167,6 @@ body{
     transform: rotate(-5deg);
     transform-origin: bottom left;
     z-index: 1;
-}
-
-#rectangleNoir {
-    position: absolute;
-    bottom: -100%;
-    left:-10%;
-    width: 120%;
-    height: 30vh;
-    background: black;
-    transform: rotate(5deg);
-    transform-origin: bottom left;
-    z-index: 1;
-}
-
-#cover {
-    position: absolute;
-    bottom: -121%;
-    width: 110%;
-    height: 25vh;
-    background: black;
 }
 
 #mobile{

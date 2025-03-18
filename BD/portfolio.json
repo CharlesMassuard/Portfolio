@@ -1,34 +1,14 @@
 {
     "projets" : [
         {
-            "id": 1,
-            "nom": "Space Invaders",
-            "img": ["../static/img/spaceinvaders-menu.png"],
-            "description": "Ce projet consiste à recréer le jeu 'SpaceInvaders' à l'aide de <i>JavaFX</i>. Le jeu est composé d'un menu principal, un menu pause, et une fenetre de jeu. Une musique en arrière plan est présente, ainsi que plusieurs bruitages (tirs, destruction d'ennemis). Le jeu est composé de plusieurs vagues, à chaque nouvelle vague, il y a plus d'ennemis. Dans le menu principal, le joueur peut choisir le nombre de vagues et le nombre d'ennemis.",
-            "cadre": "1ère année de BUT Informatique",
-            "github": "https://github.com/CharlesMassuard/SAE_SpaceInvaders",
-            "technos": ["Java", "JavaFX"]
-        },
-        {
-            "id": 2,
-            "nom": "Réseau social",
-            "img": ["../static/img/reseau_social_jfx.png"]
-        },
-        {
             "id": 3,
             "nom": "Sonorify",
             "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"],
-            "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.",
+            "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.",
             "cadre": "2ème année de BUT Informatique",
             "github": "https://www.github.com/CharlesMassuard/Sonorify",
-            "site": "https://sonorify.herokuapp.com/",
             "technos": ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
-            "coupDeCoeur": true
-        },
-        {
-            "id": 4,
-            "nom": "Dinodex",
-            "img": ["../static/img/dinodex.png"]
+            "coupDeCoeur": false
         },
         {
             "id": 5,
@@ -44,6 +24,21 @@
             "id": 6,
             "nom": "Site personnel",
             "img":  ["../static/img/portfolio_img.png"],
+            "coupDeCoeur": false
+        },
+        {
+            "id": 7,
+            "nom": "Visualisation de données en temps réel",
+            "img":  ["../static/img/hyperbole.png"],
+            "coupDeCoeur": false
+        },
+        {
+            "id": 8,
+            "nom": "N'oubliez pas les paroles",
+            "img":  ["../static/img/findlyrics.png", "../static/img/findTheLyrics2.png", "../static/img/findTheLyrics3.png"],
+            "description": "",
+            "cadre": "Projet personnel",
+            "technos": ["HTML", "CSS", "JavaScript"],
             "coupDeCoeur": true
         }
     ],
