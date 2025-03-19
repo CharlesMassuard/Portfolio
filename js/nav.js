@@ -1,5 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    //chargement du header
+    fetch('/html/navBarPC.html')
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector('#computer header').innerHTML = data;
+        });
+    //
+
     var count = 0;
 
     //Never gonna give you up si 5 clics (easteregg n°1)
