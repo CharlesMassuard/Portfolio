@@ -1,11 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    //detection si mobile le temps du développement -> affiche page erreur
+    function isMobileDevice() {
+        console.log(window.innerWidth);
+        return window.innerWidth <= 768 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+    }
+    
+    if (isMobileDevice()) {
+        window.location.href = "/html/erreurMobile.html";  // Redirige vers une page d'erreur
+    }    
     
     //chargement du header
+    // Chargement du header
     fetch('/html/navBarPC.html')
         .then(response => response.text())
         .then(data => {
             document.querySelector('#computer header').innerHTML = data;
+
+            // Une fois le menu chargé, ajouter la classe "select" au lien actif
+            highlightActiveLink();
         });
+
+        // Fonction pour ajouter la classe "select" au lien correspondant à la page actuelle
+        function highlightActiveLink() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('#computer nav a');
+
+            navLinks.forEach(link => {
+                const linkPath = link.getAttribute('href');
+        
+                // Vérification standard
+                if (currentPath === linkPath) {
+                    link.classList.add('select');
+                }
+        
+                // Cas particulier : si on est dans une sous-page de portfolio
+                if (currentPath.includes('/html/projet.html') || currentPath.includes('/html/portfolio.html')) {
+                    document.querySelector('a[href="/html/portfolio.html"]').classList.add('select');
+                }
+            });
+        }   
     //
 
     var count = 0;
