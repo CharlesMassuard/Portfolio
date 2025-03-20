@@ -95,8 +95,7 @@ a{
 
 /* Darker background on mouse-over */
 .btn:hover {
-  background-color:white;
-  color: black;
+  background-color:rgb(56, 56, 56);
 }
 
 #textSite{

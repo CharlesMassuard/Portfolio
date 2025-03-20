@@ -5,9 +5,10 @@
             "nom": "Sonorify",
             "img": ["../static/img/sonorify.png", "../static/img/sonorify2.webp", "../static/img/sonorify3.webp", "../static/img/sonorify4.webp", "../static/img/sonorify5.webp", "../static/img/sonorify6.webp", "../static/img/sonorify7.webp"],
             "description": "<strong>Sonorify</strong> est une application web qui permet de rechercher des musiques sur Spotify et de les écouter. Elle permet également de créer des playlists et de les partager avec d'autres utilisateurs.",
-            "cadre": "2ème année de BUT Informatique",
+            "cadre": "Universitaire",
             "github": "https://www.github.com/CharlesMassuard/Sonorify",
             "technos": ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
+            "tags": ["Musique", "Streaming"],
             "coupDeCoeur": false
         },
         {
@@ -15,31 +16,39 @@
             "nom": "Find Castillon's Song",
             "img": ["../static/img/findcastillonsong.png", "../static/img/findcastillonsong2.png", "../static/img/findcastillonsong3.png"],
             "description": "Ce site permet de s'entrainer à trouver le nom des chansons d'<b>Adèle Castillon</b>. Il regroupe les chansons de sa carrière solo, ainsi que de <i>Vidéoclub</i>, son premier groupe. Il y a 4 modes de jeux disponibles : le mode normal, contre la montre, aléatoire et extrème. Le joueur doit ainsi trouver le nom de 28 chansons, avec un temps limité ou non, en fonction du mode choisi. Le site est entièrement responsive.",
-            "cadre": "Projet personnel",
+            "cadre": "Personnel",
             "github": "https://github.com/CharlesMassuard/FindCastillonSong",
             "technos": ["HTML", "CSS", "JavaScript"],
-            "coupDeCoeur": true
+            "coupDeCoeur": true,
+            "tags": ["Jeu", "Musique", "Responsive"]
         },
         {
             "id": 6,
             "nom": "Site personnel",
-            "img":  ["../static/img/portfolio_img.png"],
-            "coupDeCoeur": false
+            "cadre": "Personnel",
+            "img":  ["../static/img/templatesImg/portfolio.png"],
+            "templateImg": "../static/img/templatesImg/portfolio.png",
+            "coupDeCoeur": false,
+            "tags": ["Portfolio"]
         },
         {
             "id": 7,
             "nom": "Visualisation de données en temps réel",
+            "cadre": "Universitaire",
             "img":  ["../static/img/hyperbole.png"],
+            "tags": ["REACT", "Temps réel", "Client"],
             "coupDeCoeur": false
         },
         {
             "id": 8,
             "nom": "N'oubliez pas les paroles",
             "img":  ["../static/img/findlyrics.png", "../static/img/findTheLyrics2.png", "../static/img/findTheLyrics3.png"],
-            "description": "",
-            "cadre": "Projet personnel",
+            "description": "Site WEB permettant de s'entrainer à retrouver les paroles d'une chanson.<br>Il suffit de rentrer le nom du son ainsi que l'artiste, et un tableau s'affiche, au joueur de retrouver les paroles.<br>Une fois sur la page de jeu, le joueur rentre des paroles. Dès lors que l'entrée reconnait un mot (ou une séquence de lettres) présente dans les paroles, toutes les cases correspondantes à cette séquence sont affichées.<br>Un système de classement est présent : classement général des joueurs, sons les plus joués, artistes les plus joués, sons les plus gagnés.<br>Les joueurs peuvent se connecter via un compte Google.<br>Le site est disponible à tous et est hébergé ici : <a href='https://the-lyrics.netlify.app' target='_blank'>https://the-lyrics.netlify.app</a> <br>Les données sont stockées sur une base de données Firebase.<br> Plusieurs améliorations sont prévues, notamment un classement personnel, une baisse du score relative au nombre de fois qu'un même son est joué (gagné moins de points si on réussi un son déjà réussi), une version responsive, notamment pour être jouée sur mobile, et autres ajouts et fixs.",
+            "cadre": "Personnel",
             "technos": ["HTML", "CSS", "JavaScript"],
-            "coupDeCoeur": true
+            "site": "https://the-lyrics.netlify.app",
+            "coupDeCoeur": true,
+            "tags": ["Jeu", "Classement", "Responsive"]
         }
     ],
 

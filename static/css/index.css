@@ -1,9 +1,18 @@
-body{
-    background-color: white;
+body {
+    background-color: rgb(17, 17, 17);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+}
+
+/* Effet de flou progressif */
+.blur-mask {
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(8px);
 }
 
 .split-screen {
@@ -22,12 +31,9 @@ body{
     position: relative;
 }
 
-.right-side {   
+.right-side {
     width: 50%;
-    background: url('../img/grandBornand.png') no-repeat center center; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url('../img/grandBornand.png') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -37,7 +43,7 @@ body{
     letter-spacing: 0.3em;
 }
 
-.left-side h1{
+.left-side h1 {
     margin: 0.001em 0;
     margin-left: 0.35em;
     margin-top: -5%;
@@ -48,7 +54,7 @@ body{
     margin-top: -5%;
 }
 
-.right-side h1:hover{
+.right-side h1:hover {
     letter-spacing: 0.25em;
 }
 
@@ -105,87 +111,160 @@ body{
 
 .animated-text-bottom {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 0;
 }
 
-#deuxiemePageCentre{
-    position: relative; /*Permet de prendre en comtpe le z-index*/
-    margin-top: 1%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    z-index: 2;
+#projetTitre {
+    position: absolute;
+    font-size: 3vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 1;
+    margin-top: -2%;
 }
 
-#deuxiemePageCentre h1{
-    font-size: 4vw;
-    margin: 0;
-}
-
-#deuxiemePageCentre h2{
-    font-size: 3vw; 
-    margin: 0;
-    transition: 0.5s;
-}
-
-#deuxiemePageCentre h2:hover{
-    letter-spacing: 0.02em; 
-}
-
-#deuxiemePageCentre a{
-    display: flex;
-    width: auto;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
-    text-decoration: none;
-    color: black;
-}
-
-#deuxiemePageCentre img{
-    width: 40%;
-    margin-top: 1%;
-    border-radius: 30px;
-    transition: 0.5s;
-}
-
-#deuxiemePageCentre img:hover{
-    scale: 1.01;
-    cursor: pointer;
-}
-
-/*RECTANGLES*/
-
-#rectangleBlanc {
+/* RECTANGLES */
+#rectangle {
     position: absolute;
     bottom: -27%;
     width: 120%;
     height: 30vh;
-    background: white;
+    background: rgb(17, 17, 17);
     transform: rotate(-5deg);
     transform-origin: bottom left;
     z-index: 1;
 }
 
-#mobile{
+#mobile {
     display: none;
 }
 
-@media screen and (max-width: 768px){
+/* Style des cartes */
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 10vh;
+    box-sizing: border-box;
+}
 
-    #computer{
+.card-group {
+    display: flex;
+    flex-wrap: wrap; /* Permettre aux cartes de passer à la ligne */
+    justify-content: center; /* Centrer les cartes dans le conteneur */
+    gap: 2.5rem;
+    max-width: 90%; /* Limiter la largeur pour éviter que les cartes touchent les bords */
+}
+
+.card {
+    position: relative;
+    width: 18rem;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.5rem; /* Ajouter un espacement en bas pour les lignes multiples */
+}
+
+.card img {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.card-content {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    z-index: 2;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-tag {
+    font-size: 0.875rem;
+    background-color: rgba(45, 55, 72, 0.5);
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.card-description {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    color: #b8b8b8;
+}
+
+.card-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tag {
+    background-color: rgba(184, 184, 184, 0.2);
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 9999px;
+}
+
+.card-button {
+    margin-top: 1rem;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    border-radius: 9999px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-button:hover {
+    transform: scale(1.01);
+}
+
+.card:hover {
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    #computer {
         display: none;
     }
 
-    #mobile{
+    #mobile {
         display: block;
         color: white;
         background-color: black;
     }
 
-    .top-screen{
+    .top-screen {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -201,7 +280,7 @@ body{
         width: 100%;
         font-size: 13vw;
     }
-    
+
     .animated-text-bottom {
         position: absolute;
         left: 0;
@@ -210,12 +289,9 @@ body{
         font-size: 11vw;
     }
 
-    .bottom-screen {   
+    .bottom-screen {
         height: 66vh;
-        background: url('../img/grandBornand.png') no-repeat center center fixed; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
+        background: url('../img/grandBornand.png') no-repeat center center fixed;
         background-size: cover;
         display: flex;
         justify-content: center;
@@ -226,7 +302,7 @@ body{
         color: black;
     }
 
-    #voirPlusTel{
+    #voirPlusTel {
         border-radius: 1em;
         background: rgba(0, 0, 0, 0.5);
         border: 0.1em solid rgba(255, 255, 255, 0.4);
@@ -235,8 +311,18 @@ body{
         padding: 0.5em 1em;
     }
 
-    #voirPlusTel:hover{
+    #voirPlusTel:hover {
         background: rgba(0, 0, 0, 0.8);
         cursor: pointer;
+    }
+
+    .card-group {
+        flex-direction: column; /* Empiler les cartes en mode mobile */
+        gap: 2rem;
+    }
+
+    .card {
+        width: 85%; /* Ajuster la largeur des cartes en mode mobile */
+        margin-bottom: 0; /* Supprimer la marge du bas car nous utilisons gap */
     }
 }

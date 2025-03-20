@@ -58,19 +58,21 @@ async function imageExists(url) {
 
 async function loadProjectImages(imagesprojet) {
     let slideshow = document.getElementById('slideshow-container');
+    let dots = document.getElementById('dots');  // Assurez-vous d'avoir un conteneur pour les dots
     for (let i = 0; i < imagesprojet.length; i++) {
         if (await imageExists(imagesprojet[i])) {
             slideshow.innerHTML += `
             <div class="mySlides fade">
-                <img src="${imagesprojet[i]}" id="img${i}"style="width:100%" alt="Image ${i}" onClick="swapTailleImage(${i})">
+                <img src="${imagesprojet[i]}" id="img${i}" style="width:100%" alt="Image ${i}" onClick="swapTailleImage(${i})">
             </div>`;
             dots.innerHTML += `<span class="dot" onclick="currentSlide(${i+1})" title="Afficher l'image ${i+1}"></span>`;
         }
     }
     slideshow.innerHTML += `
         <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)" title="Afficher l'image précédnete">&#10094;</a>
+        <a class="prev" onclick="plusSlides(-1)" title="Afficher l'image précédente">&#10094;</a>
         <a class="next" onclick="plusSlides(1)" title="Afficher l'image suivante">&#10095;</a>`;
+
     let slideIndex = 1;
     showSlides(slideIndex);
 
@@ -87,9 +89,10 @@ async function loadProjectImages(imagesprojet) {
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1;}
-        if (n < 1) {slideIndex = slides.length;}
+        let dots = document.getElementsByClassName("dot"); // On récupère les dots ici
+
+        if (n > slides.length) { slideIndex = 1; }
+        if (n < 1) { slideIndex = slides.length; }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }

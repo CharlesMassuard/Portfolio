@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //detection si mobile le temps du développement -> affiche page erreur
     function isMobileDevice() {
-        console.log(window.innerWidth);
         return window.innerWidth <= 768 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
     }
     
