@@ -8,11 +8,12 @@ body {
 
 /* Effet de flou progressif */
 .blur-mask {
-    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 100%);
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 42%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgb(0, 0, 0) 42%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to top, rgb(0, 0, 0) 42%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
     inset: 0;
     backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.21);
 }
 
 .split-screen {
@@ -158,17 +159,17 @@ body {
     display: flex;
     flex-wrap: wrap; /* Permettre aux cartes de passer à la ligne */
     justify-content: center; /* Centrer les cartes dans le conteneur */
-    gap: 2.5rem;
+    gap: 3.5rem;
     max-width: 90%; /* Limiter la largeur pour éviter que les cartes touchent les bords */
 }
 
 .card {
     position: relative;
-    width: 18rem;
+    width: 20rem;
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2.5rem; /* Ajouter un espacement en bas pour les lignes multiples */
+    margin-bottom: 2.5rem;
 }
 
 .card img {
@@ -215,7 +216,7 @@ body {
 .card-description {
     font-size: 0.875rem;
     margin-top: 0.25rem;
-    color: #b8b8b8;
+    color: #e6e6e6;
 }
 
 .card-tags {
@@ -225,7 +226,7 @@ body {
 }
 
 .tag {
-    background-color: rgba(184, 184, 184, 0.2);
+    background-color: rgba(184, 184, 184, 0.3);
     font-size: 0.75rem;
     padding: 0.375rem 0.75rem;
     border-radius: 9999px;
@@ -235,23 +236,28 @@ body {
     margin-top: 1rem;
     background-color: white;
     color: black;
+    font-size: 1rem;
+    height: 3rem;
     font-weight: 600;
     padding: 0.75rem 0;
     border-radius: 9999px;
     width: 100%;
     border: none;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .card-button:hover {
-    transform: scale(1.01);
+    width: 106%;
+    transform: translateX(-3%); /* Déplace le bouton de 5% vers la gauche pour le centrer */
 }
 
 .card:hover {
     transition: all 0.3s;
     cursor: pointer;
 }
+
+
 
 @media screen and (max-width: 768px) {
     #computer {

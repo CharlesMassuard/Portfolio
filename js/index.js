@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
     
             let newCard = `
-            <div class="card">
+            <div class="card" title="${projet.nom}" onclick="window.location.href='./html/projet.html?id=${projet.id}'">
                 <img src="${projet.templateImg}" class="card-image" title="${projet.nom}" alt="Image du projet">
                 <div class="card-overlay">
                     <div class="blur-mask"></div>
