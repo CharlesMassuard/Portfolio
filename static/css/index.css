@@ -287,13 +287,13 @@ body {
         align-items: center;
         flex-direction: column;
         text-align: center;
-        height: 28vh;
+        height: 25vh;
     }
 
     .animated-text {
         position: absolute;
         left: 0;
-        top: 5%;
+        top: 0%;
         width: 100%;
         font-size: 13vw;
     }
@@ -307,7 +307,7 @@ body {
     }
 
     .bottom-screen {
-        height: calc(100vh - 28vh);
+        height: calc(100vh - 25vh);
         background: url('../img/grandBornand.png') no-repeat center center fixed;
         background-size: cover;
         display: flex;
