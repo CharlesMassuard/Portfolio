@@ -99,4 +99,59 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     displayProjects();
+
+    // Vérifier si on est sur mobile
+    const isMobile = window.innerWidth <= 768;
+    
+    // Appliquer l'animation uniquement sur mobile
+    if (isMobile) {
+        // Sélectionner toutes les cartes
+        const cards = document.querySelectorAll('.card');
+        
+        // Configuration de l'Intersection Observer optimisée pour mobile
+        const options = {
+            root: null,
+            rootMargin: '10px', // Petite marge pour déclencher l'animation un peu avant
+            threshold: 0.05 // Seuil bas pour mobile
+        };
+        
+        // Callback exécuté lorsqu'une carte devient visible
+        const handleIntersect = (entries, observer) => {
+            entries.forEach(entry => {
+                // Si la carte est visible
+                if (entry.isIntersecting) {
+                    // Ajouter la classe visible pour déclencher l'animation
+                    entry.target.classList.add('visible');
+                    // Arrêter d'observer cette carte
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+        
+        // Créer l'observer
+        const observer = new IntersectionObserver(handleIntersect, options);
+        
+        // Observer chaque carte
+        cards.forEach(card => {
+            observer.observe(card);
+        });
+    } else {
+        // Sur desktop, afficher les cartes sans animation
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = 1;
+        });
+    }
+    
+    // Gérer le redimensionnement de la fenêtre
+    window.addEventListener('resize', function() {
+        // Si on passe d'un mode à l'autre, recharger la page pour appliquer les bons styles
+        const nowMobile = window.innerWidth <= 768;
+        if (nowMobile !== isMobile) {
+            // Alternativement, vous pourriez juste ajuster les styles sans recharger
+            document.querySelectorAll('.card').forEach(card => {
+                card.style.opacity = 1;
+                card.style.transform = 'translateY(0)';
+            });
+        }
+    });
 });
