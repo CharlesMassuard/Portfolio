@@ -38,8 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById("voirPlusTel").addEventListener("click", function() {
+        // Obtenir la référence à la div "cartes"
+        const cartesElement = document.getElementById("cartes");
+        
+        // Calculer la position exacte de l'élément par rapport au haut de la page
+        const cartesPosition = cartesElement.getBoundingClientRect().top + window.pageYOffset;
+        
+        // Faire défiler vers cette position
         window.scrollTo({
-            top: window.innerHeight,
+            top: cartesPosition,
             behavior: 'smooth'
         });
     });
