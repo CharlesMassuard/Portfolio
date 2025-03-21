@@ -30,6 +30,7 @@
             "nom": "Mon portfolio",
             "cadre": "Personnel",
             "img":  ["../static/img/templatesImg/portfolio.png"],
+            "site": "https://charlesmassuard.netlify.app",
             "templateImg": "../static/img/templatesImg/portfolio2.png",
             "coupDeCoeur": false,
             "tags": ["Portfolio"],
@@ -46,7 +47,8 @@
             "coupDeCoeur": false,
             "description": "Application permettant de visualiser des données en temps réel. Par groupe de 4, nous avons développé cette application dans le cadre du projet de fin de BUT Informatique. Les données sont récupérées par des capteurs présents sur une voiture, et envoyées à la base de données en temps réel Firebase via le Wifi de la carte arduino, connectée à la voiture. Ces données sont ensuite récupérées par l'application web REACT afin d'être affichées en temsp réel. Il y a notamment la position GPS actuelle de la voiture sur une carte avec son tracet, sa vitesse ou encore sa température.<br>Durant ce projet, j'ai pu être chef de projet.",
             "technos": ["REACT", "Arduino", "Firebase"],
-            "littleDescription": "Application permettant de visualiser des données en temps réel."
+            "littleDescription": "Application permettant de visualiser des données en temps réel.",
+            "site": "https://www.linkedin.com/in/charles-massuard/details/projects/"
         },
         {
             "id": 8,

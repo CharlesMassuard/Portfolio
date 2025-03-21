@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
     
             let newCard = `
-            <div class="card" title="${projet.nom}" onclick="window.location.href='./html/projet.html?id=${projet.id}'">
+            <div class="card" title="${projet.nom}" ${projet.site ? `onclick="window.open('${projet.site}', '_blank')"` : projet.github ? `onclick="window.open('${projet.github}', '_blank')"` : ''}>
                 <img src="${projet.templateImg}" class="card-image" title="${projet.nom}" alt="Image du projet">
                 <div class="card-overlay">
                     <div class="blur-mask"></div>
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="card-tags">
                             ${tagsHTML}
                         </div>
-                        <button class="card-button">Voir le projet</button>
+                        ${projet.site ? `<a href="${projet.site}" target="_blank"><button class="card-button">Voir le projet</button></a>` : projet.github ? `<a href="${projet.github}" target="_blank"><button class="card-button">Voir le projet</button></a>` : '<button class="card-button">Voir le projet</button>'}
                     </div>
                 </div>
             </div>`;
@@ -99,4 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     displayProjects();
+   
+
 });
