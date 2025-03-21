@@ -310,7 +310,7 @@ body {
         height: calc(100vh - 25vh);
         background: url('../img/grandBornand.png') no-repeat center center;
         background-size: cover;
-        background-attachment: fixed;
+        /* Supprimer background-attachment: fixed pour iOS */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -318,6 +318,13 @@ body {
         font-size: 5vw;
         letter-spacing: 0.3em;
         color: black;
+    }
+    
+    /* Solution pour appareils non-iOS */
+    @supports (not (-webkit-touch-callout: none)) {
+        .bottom-screen {
+            background-attachment: fixed;
+        }
     }
 
     #voirPlusTel {
