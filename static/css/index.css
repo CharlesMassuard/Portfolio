@@ -176,7 +176,7 @@ body {
 
 .card {
     position: relative;
-    width: 25rem;
+    width: 20rem;
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -352,5 +352,40 @@ body {
     .card {
         width: 85%; /* Ajuster la largeur des cartes en mode mobile */
         margin-bottom: 0; /* Supprimer la marge du bas car nous utilisons gap */
+    }
+
+    .card-button {
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        height: 2.5rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .card-tag {
+        font-size: 0.6rem;
+        background-color: rgba(45, 55, 72, 0.5);
+        padding: 0.25rem 0.5rem;
+        border-radius: 9999px;
+    }
+    
+    .card-description {
+        font-size: 0.675rem;
+        margin-top: 0.25rem;
+        color: #e6e6e6;
+    }
+    
+   
+    .tag {
+        background-color: rgba(184, 184, 184, 0.3);
+        font-size: 0.5rem;
+        padding: 0.375rem 0.75rem;
+        border-radius: 9999px;
     }
 }
