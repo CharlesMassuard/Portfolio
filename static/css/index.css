@@ -13,7 +13,7 @@ body {
     position: absolute;
     inset: 0;
     backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.21);
+    background-color: rgba(0, 0, 0, 0.473);
 }
 
 .split-screen {
@@ -123,7 +123,7 @@ body {
     transform: translateX(-50%);
     color: white;
     z-index: 1;
-    margin-top: -2%;
+    margin-top: -10vh;
 }
 
 /* RECTANGLES */
@@ -161,11 +161,12 @@ body {
     justify-content: center; /* Centrer les cartes dans le conteneur */
     gap: 3.5rem;
     max-width: 90%; /* Limiter la largeur pour éviter que les cartes touchent les bords */
+    margin-top: 5vh;
 }
 
 .card {
     position: relative;
-    width: 20rem;
+    width: 25rem;
     border-radius: 2.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -276,13 +277,13 @@ body {
         align-items: center;
         flex-direction: column;
         text-align: center;
-        height: 35vh;
+        height: 28vh;
     }
 
     .animated-text {
         position: absolute;
         left: 0;
-        top: 9%;
+        top: 5%;
         width: 100%;
         font-size: 13vw;
     }
@@ -290,13 +291,13 @@ body {
     .animated-text-bottom {
         position: absolute;
         left: 0;
-        top: 17%;
+        top: 12%;
         width: 100%;
         font-size: 11vw;
     }
 
     .bottom-screen {
-        height: 66vh;
+        height: calc(100vh - 28vh);
         background: url('../img/grandBornand.png') no-repeat center center fixed;
         background-size: cover;
         display: flex;
@@ -322,9 +323,20 @@ body {
         cursor: pointer;
     }
 
+    #projetTitre {
+        position: absolute;
+        font-size: 7vw;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        z-index: 1;
+        margin-top: -5vh;
+    }
+
     .card-group {
         flex-direction: column; /* Empiler les cartes en mode mobile */
         gap: 2rem;
+        align-items: center; 
     }
 
     .card {

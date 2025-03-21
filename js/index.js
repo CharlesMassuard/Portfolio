@@ -34,11 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
         var topScreenHeight = document.querySelector('.top-screen').offsetHeight;
         var bottomScreenHeight = windowHeight - navbarHeight - topScreenHeight;
         
-        document.querySelector('.bottom-screen').style.height = bottomScreenHeight + 'px';
+        // document.querySelector('.bottom-screen').style.height = bottomScreenHeight + 'px';
     }
 
     document.getElementById("voirPlusTel").addEventListener("click", function() {
-        window.location.href = "./html/portfolio.html";
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
     });
 
     async function displayProjects() {

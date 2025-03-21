@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return window.innerWidth <= 768 || /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
     }
     
-    if (isMobileDevice()) {
-        window.location.href = "/html/erreurMobile.html";  // Redirige vers une page d'erreur
-    }    
+    // if (isMobileDevice()) {
+    //     window.location.href = "/html/erreurMobile.html";  // Redirige vers une page d'erreur
+    // }    
     
-    //chargement du header
     // Chargement du header
     fetch('/html/navBarPC.html')
         .then(response => response.text())
