@@ -308,8 +308,9 @@ body {
 
     .bottom-screen {
         height: calc(100vh - 25vh);
-        background: url('../img/grandBornand.png') no-repeat center center fixed;
+        background: url('../img/grandBornand.png') no-repeat center center;
         background-size: cover;
+        background-attachment: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
