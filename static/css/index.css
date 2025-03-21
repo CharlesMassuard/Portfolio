@@ -8,12 +8,22 @@ body {
 
 /* Effet de flou progressif */
 .blur-mask {
+    /* Mask gradient */
     -webkit-mask-image: linear-gradient(to top, rgb(0, 0, 0) 42%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to top, rgb(0, 0, 0) 42%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
     inset: 0;
+    /* Multiple vendor prefixes */
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.473);
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not ((backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px))) {
+    .blur-mask {
+        background-color: rgba(0, 0, 0, 0.7); /* Darker background as fallback */
+    }
 }
 
 .split-screen {
