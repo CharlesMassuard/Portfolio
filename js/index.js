@@ -95,10 +95,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>`;
             divCards.insertAdjacentHTML('beforeend', newCard);
+            document.querySelectorAll('.card-button').forEach(button => {
+                button.addEventListener("mouseover", function() {
+                    let parentDiv = button.closest('.card');
+                    parentDiv.removeAttribute('onclick');
+                });
+                button.addEventListener("mouseout", function() {
+                    let parentDiv = button.closest('.card');
+                    if (parentDiv.getAttribute('onclick') === null) {
+                        parentDiv.setAttribute('onclick', projet.site ? `onclick="window.open('${projet.site}', '_blank')"` : projet.github ? `onclick="window.open('${projet.github}', '_blank')"` : '');
+                    }
+                });
+            });
         });
     }
 
     displayProjects();
    
+    let cartes = document.querySelectorAll('.card');
 
 });

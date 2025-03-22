@@ -281,7 +281,7 @@ body {
     #mobile {
         display: block;
         color: white;
-        background-color: black;
+        background-color: rgb(17, 17, 17);
     }
 
     .top-screen {
