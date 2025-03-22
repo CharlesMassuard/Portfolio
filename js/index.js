@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
     
             let newCard = `
-            <div class="card" title="${projet.nom}" ${projet.site ? `onclick="window.open('${projet.site}', '_blank')"` : projet.github ? `onclick="window.open('${projet.github}', '_blank')"` : ''}>
+            <div class="card" title="${projet.nom}" data-site="${projet.site || ''}" data-github="${projet.github || ''}">
                 <img src="${projet.templateImg}" class="card-image" title="${projet.nom}" alt="Image du projet">
                 <div class="card-overlay">
                     <div class="blur-mask"></div>
@@ -95,23 +95,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>`;
             divCards.insertAdjacentHTML('beforeend', newCard);
-            document.querySelectorAll('.card-button').forEach(button => {
-                button.addEventListener("mouseover", function() {
-                    let parentDiv = button.closest('.card');
-                    parentDiv.removeAttribute('onclick');
-                });
-                button.addEventListener("mouseout", function() {
-                    let parentDiv = button.closest('.card');
-                    if (parentDiv.getAttribute('onclick') === null) {
-                        parentDiv.setAttribute('onclick', projet.site ? `onclick="window.open('${projet.site}', '_blank')"` : projet.github ? `onclick="window.open('${projet.github}', '_blank')"` : '');
+        });
+
+        // Ajoutez les événements après avoir inséré toutes les cartes
+        document.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener("mouseover", function() {
+                let parentDiv = button.closest('.card');
+                parentDiv.removeAttribute('onclick');
+            });
+            button.addEventListener("mouseout", function() {
+                let parentDiv = button.closest('.card');
+                if (parentDiv.getAttribute('onclick') === null) {
+                    const site = parentDiv.getAttribute('data-site');
+                    const github = parentDiv.getAttribute('data-github');
+                    if (site) {
+                        parentDiv.setAttribute('onclick', `window.open('${site}', '_blank')`);
+                    } else if (github) {
+                        parentDiv.setAttribute('onclick', `window.open('${github}', '_blank')`);
                     }
-                });
+                }
             });
         });
     }
 
     displayProjects();
-   
-    let cartes = document.querySelectorAll('.card');
-
 });
