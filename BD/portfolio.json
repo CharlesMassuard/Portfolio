@@ -62,6 +62,31 @@
             "coupDeCoeur": true,
             "tags": ["Jeu", "Classement", "Responsive"],
             "littleDescription": "Site permettant de s'entrainer à retrouver les paroles d'une chanson."
+        },
+        {
+            "id": 9,
+            "nom": "ARK Bot",
+            "img":  ["../static/img/ARKBotMain.png"],
+            "description": "Bot X (anciennement Twitter) utilisant les APIs de Twitter et du jeu vidéo ARK afin de poster les dernières actualités du jeu. Des GITHUB Actions sont utilisées afin de lancer les fetch des informations et les posts sur Twitter.",
+            "cadre": "Personnel",
+            "technos": ["JavaScript"],
+            "site": "https://x.com/ark__bot",
+            "coupDeCoeur": false,
+            "tags": ["BOT", "API", "Twitter"],
+            "littleDescription": "Bot X (anciennement Twitter) utilisant les APIs de Twitter et du jeu vidéo ARK afin de poster les dernières actualités du jeu."
+        }
+        ,
+        {
+            "id": 10,
+            "nom": "Dinodex",
+            "img":  ["../static/img/dinodex.png"],
+            "description": "Single Page Application (SPA) permettant de visualiser les dinosaures, nourritures et armures du jeu vidéo ARK: Survival Evolved. Il est possible de rechercher les dinosaures et nourritures par noms et de les ajouter en favoris. Certains dinosaures peuvent être améliorés, ce qui lance une animation.",
+            "cadre": "Universitaire",
+            "technos": ["JavaScript", "HTML", "CSS"],
+            "site": "https://cm-dinodex.netlify.app",
+            "coupDeCoeur": false,
+            "tags": ["SPA", "JavaScript"],
+            "littleDescription": "Single Page Application (SPA) permettant de visualiser les dinosaures, nourritures et armures du jeu vidéo ARK: Survival Evolved."
         }
     ],
 
