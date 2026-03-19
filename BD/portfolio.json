@@ -74,8 +74,7 @@
             "coupDeCoeur": false,
             "tags": ["BOT", "API", "Twitter"],
             "littleDescription": "Bot X (anciennement Twitter) utilisant les APIs de Twitter et du jeu vidéo ARK afin de poster les dernières actualités du jeu."
-        }
-        ,
+        },
         {
             "id": 10,
             "nom": "Dinodex",
@@ -87,6 +86,18 @@
             "coupDeCoeur": false,
             "tags": ["SPA", "JavaScript"],
             "littleDescription": "Single Page Application (SPA) permettant de visualiser les dinosaures, nourritures et armures du jeu vidéo ARK: Survival Evolved."
+        },
+        {
+            "id": 11,
+            "nom": "MyMovies",
+            "img":  ["../static/img/myMovies.webp"],
+            "description": "Site permettant de découvrir et évaluer des films. Utilisation de l'API TMDB afin de récupérer les informations des films et les classements.",
+            "cadre": "Universitaire",
+            "technos": ["Vue.js", "Vuetify", "SpringBoot", "Java"],
+            "coupDeCoeur": true,
+            "site": "https://www.linkedin.com/in/charles-massuard/details/projects/110808896/multiple-media-viewer/?profileId=ACoAAEVuopcBqDp48pFdg3JGKY-aESD--raX0U0&treasuryMediaId=1773932302883",
+            "tags": ["Vue.js", "Vuetify", "SpringBoot", "Java"],
+            "littleDescription": "Site permettant de découvrir et évaluer des films. Utilisation de l'API TMDB afin de récupérer les informations des films et les classements."
         }
     ],
 
